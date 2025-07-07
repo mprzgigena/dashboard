@@ -1,5 +1,5 @@
 <template>
-  <title>Glass Dashboard</title>
+  <title>Dashboard de usuario</title>
   <div>
     <NuxtPage/>
   </div>

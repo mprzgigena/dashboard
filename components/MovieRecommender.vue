@@ -36,24 +36,3 @@ if (data.value && data.value.results) {
 }
 </script>
 
-<style scoped>
-.glass-modal {
-  background: rgba(35, 39, 47, 0.18);
-  border-radius: 1.5rem;
-  box-shadow: none;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1.5px solid rgba(255,255,255,0.18);
-  min-width: 0;
-  max-width: 100%;
-  animation: glassIn 0.4s cubic-bezier(.4,2,.6,1) both;
-  color: #23272f;
-}
-.text-matte-dark {
-  color: #23272f;
-}
-@keyframes glassIn {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
-}
-</style>

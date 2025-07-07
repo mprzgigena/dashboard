@@ -121,26 +121,8 @@ const weatherType = computed(() => {
 </script>
 
 <style scoped>
-/* Glassmorphism effect for the main container */
-.weather-glass-modal {
-  border-radius: 1.5rem;
-  padding: 2rem;
-  margin: auto;
-  max-width: 100%;
-  min-width: 0;
-  background: rgba(35, 39, 47, 0.18);
-  box-shadow: none;
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border: 1.5px solid rgba(255,255,255,0.18);
-  animation: glassIn 0.4s cubic-bezier(.4,2,.6,1) both;
-  color: #23272f;
-}
-@keyframes glassIn {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
-}
-/* ...rest of your weather component styles (copy from your previous CSS for .weather-title, .weather-main-grid, etc.) ... */
+
+/* ...resto de los estilos ... */
 .weather-title {
   display: flex;
   align-items: center;
@@ -255,4 +237,26 @@ const weatherType = computed(() => {
 .weather-footer a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .weather-main-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .weather-status-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+    gap: 12px;
+  }
+  .weather-status-card {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+  .weather-data-col {
+    justify-content: center;
+  }
+}
+
 </style>
